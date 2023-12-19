@@ -4,6 +4,11 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
+    private int totalWeight = 0;
+    private int weight;
+
+    //todo Метод, который будет возвращать значение массы всех товаров в корзине:
+    //todo public double getTotalWeight()
 
     public Basket() {
         increaseCount(1);
@@ -31,7 +36,7 @@ public class Basket {
     }
 
     public void add(String name, int price) {
-        add(name, price, 1);
+        this.add(name, price, 1);
     }
 
     public void add(String name, int price, int count) {
@@ -50,7 +55,7 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " шт. - " + price;
+                count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
     }
 
@@ -75,4 +80,21 @@ public class Basket {
             System.out.println(items);
         }
     }
+
+    public double getTotalWeight() {
+        weight = weight + weight;
+        return weight;
+    }
 }
+
+//        Допишите в класс Basket :
+//
+//        1) Переменную “totalWeight”, которая будет содержать общую массу всех товаров, добавленных в корзину:
+//         - Начальное значение переменной должно быть равно 0.
+//         - При добавлении в корзину товара методом add() с параметром веса  добавляйте переданный в метод вес к этой переменной.
+//         - Если вызывается уже существующий в классе метод add(), не содержащий параметр веса (weight), эта переменная не должна изменяться.
+//        2) Метод add с дополнительным параметром веса (weight):
+//        public void add(String name, int price, int count, double weight)
+//        Метод должен переиспользовать существующие методы добавления и добавлять указанный в их параметрах вес товаров к общему весу корзины.
+//        3) Метод, который будет возвращать значение массы всех товаров в корзине:
+//        public double getTotalWeight()
