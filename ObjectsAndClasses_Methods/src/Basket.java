@@ -5,7 +5,6 @@ public class Basket {
     private int totalPrice = 0;
     private int limit;
     private int totalWeight = 0;
-    private int weight;
 
     //todo Метод, который будет возвращать значение массы всех товаров в корзине:
     //todo public double getTotalWeight()
@@ -36,10 +35,10 @@ public class Basket {
     }
 
     public void add(String name, int price) {
-        this.add(name, price, 1);
+        this.add(name, price);
     }
 
-    public void add(String name, int price, int count) {
+    public void add(String name, int price, int count, double weight) {
         boolean error = false;
         if (contains(name)) {
             error = true;
@@ -82,9 +81,11 @@ public class Basket {
     }
 
     public double getTotalWeight() {
-        weight = weight + weight;
-        return weight;
+
+        return totalWeight;
+
     }
+
 }
 
 //        Допишите в класс Basket :
