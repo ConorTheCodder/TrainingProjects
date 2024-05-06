@@ -1,37 +1,34 @@
 public class Arithmetic {
 
-    int firstNum;
-    int secondNum;
+    public int firstNum;
+    public int secondNum;
+
 
     Arithmetic(int firstNum, int secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
 
-    void sum() {
-        int summary = this.firstNum + this.secondNum;
-        System.out.println("Сумма чисел " + this.firstNum + " и " + this.secondNum + " равна: " + summary + "." );
+    public int summary() {
+        int sum = this.firstNum + this.secondNum;
+        return sum;
     }
 
-    void sub() {
-        int subtraction = this.firstNum - this.secondNum;
-        System.out.println("Разница чисел " + this.firstNum + " и " + this.secondNum + " равна: " + subtraction + "." );
+    public int multiplication() {
+        int mul = this.firstNum - this.secondNum;
+        return mul;
     }
 
-    void mul() {
-        int multiplication = this.firstNum * this.secondNum;
-        System.out.println("Произведение чисел " + this.firstNum + " и " + this.secondNum + " равно: " + multiplication + "." );
-    }
 
-    void div() {
-        int division = this.firstNum - this.secondNum;
-        System.out.println("Деление чисел " + this.firstNum + " и " + this.secondNum + " равно: " + division + "." );
+
+
+    public int max () {
+        int maximum = Math.max(this.firstNum, this.secondNum);
+        return maximum;
     }
-    void max () {
-        System.out.println("Наибольшее из двух чисел: " + (Math.max(this.firstNum, this.secondNum)) );
-    }
-    void min () {
-        System.out.println("Наименьшее из двух чисел: " + (Math.min(this.firstNum, this.secondNum)));
+    public int min () {
+        int minimum = Math.min(this.firstNum, this.secondNum);
+        return minimum;
     }
 
 
@@ -43,5 +40,5 @@ public class Arithmetic {
 // произведения чисел;
 // максимальное из двух чисел;
 // минимальное из двух чисел.
-// Имена методов придумайте самостоятельно..
+// Имена методов придумайте самостоятельно.
 }
