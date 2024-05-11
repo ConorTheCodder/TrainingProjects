@@ -72,7 +72,7 @@ public class Basket {
 
     public void add(String name, int price, int count, double weight){
         this.totalWeight = totalWeight + weight;
-
+        this.add( name,  price, count);
 
     }
 
