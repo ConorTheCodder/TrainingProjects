@@ -1,5 +1,8 @@
 public class Basket {
 
+    private static int overallAmount = 0;
+    private static int overallPrice = 0;
+
     private static int count = 0;
     private String items = "";
     private int totalPrice = 0;
@@ -7,6 +10,20 @@ public class Basket {
     private double totalWeight = 0;
 
 
+    public static void addToOverallAmount(){
+        overallAmount++;
+    }
+    public static void addToOverallPrice(int price){
+        overallPrice = overallPrice + price;
+    }
+
+    public static int getAveragePrice (){
+        return overallPrice / overallAmount;
+    }
+
+    public static int getAverageBasketsPrice(){
+        return overallPrice / count;
+    }
 
     public Basket() {
         increaseCount(1);
@@ -35,6 +52,8 @@ public class Basket {
 
     public void add(String name, int price) {
         this.add(name, price);
+        addToOverallAmount();
+        addToOverallPrice(price);
     }
 
     public void add(String name, int price, int count) {
