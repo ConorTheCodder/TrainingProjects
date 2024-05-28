@@ -1,5 +1,5 @@
 public class Container {
-    private Integer count;
+    private Integer  = 0;
 
     public void addCount(int value) {
         count = count + value;
