@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @param <T> Вид отправляемого уведомления
  */
-public interface NotificationSender<T extends Notification> {
+public interface NotificationSender<T extends Notification > {
 
     /**
      * Отправить одно уведомление

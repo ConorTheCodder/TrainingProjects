@@ -5,7 +5,7 @@ package ru.skillbox.notification;
  */
 public interface Notification {
     /**
-     * @return форматированные тело сообщений
+     * @return форматированное тело сообщений
      */
     String formattedMessage();
 }
